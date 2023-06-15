@@ -1,0 +1,63 @@
+﻿@model MainFormModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+ 
+<div >
+    <form>
+      <div class="row" style="border:1px solid black;">
+        <fieldset class="row" >
+              <legend style="color:blue;font-weight:bold;">اطلاعات فردی</legend>
+        <div class="col-md-4 mb-3" style="border-radius: 5px">
+          <label asp-for="Name"></label>
+          <input asp-for="Name" type="text" class="form-control">
+          <span asp-validation-for="Name"></span>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label asp-for="LastName"></label>
+          <input asp-for="LastName" type="text" class="form-control">
+          <span asp-validation-for="LastName"></span>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label asp-for="NationalId"></label>
+          <input asp-for="NationalId" type="text" class="form-control">
+          <span asp-validation-for="NationalId"></span>
+        </div>
+      <div class="row">
+              <div class="col-md-4 mb-3">
+                <label asp-for="Sex"></label>
+                <select asp-for="Sex" asp-items="Html.GetEnumSelectList<Sex>()" class="form-control form-select-lg">
+                    <option selected="selected" value="">انتخاب کنیید</option>
+                </select>
+                <span asp-validation-for="Sex"></span>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label asp-for="FatherName"></label>
+                <input type="text" asp-for="FatherName" class="form-control">
+                <span asp-validation-for="FatherName"></span>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationServer05">Zip</label>
+                <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div>
+            </div>  
+        </fieldset>
+      </div>
+      
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+          <label class="form-check-label" for="invalidCheck3">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+</div>
