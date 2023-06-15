@@ -261,6 +261,62 @@
       "PackagePath": "staticwebassets\\lib\\mds.bs.datetimepicker.style.css.map"
     },
     {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\persian-datepicker.css",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\persian-datepicker.css"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\persian-datepicker.min.css",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\persian-datepicker.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\persian-datepicker.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\persian-datepicker.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-blue.min.css",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-blue.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-blue.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-blue.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-cheerup.min.css",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-cheerup.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-cheerup.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-cheerup.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-dark.min.css",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-dark.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-dark.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-dark.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-redblack.min.css",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-redblack.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-redblack.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\css\\theme\\persian-datepicker-redblack.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\js\\persian-date.js",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\js\\persian-date.js"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\js\\persian-datepicker.js",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\js\\persian-datepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\persian-datepicker\\js\\persian-datepicker.min.js",
+      "PackagePath": "staticwebassets\\lib\\persian-datepicker\\js\\persian-datepicker.min.js"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.uniProject.props",
       "PackagePath": "build\\uniProject.props"
     },

@@ -2,313 +2,362 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-    
+<style>
+  .persian-datepicker{
+  
+  }
+</style>
 <div >
-  <form>
-    <div class="container-fluid" style="border:1px solid black;">
-      <fieldset>
-        <legend style="color:blue;font-weight:bold;">اطلاعات فردی</legend>
-        <div class="row">
-          <div class="col-md-4 mb-3" style="border-radius: 5px">
-                      <label asp-for="Name"></label>
-                      <input asp-for="Name" type="text" class="form-control">
-                      <span asp-validation-for="Name"></span>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label asp-for="LastName"></label>
-                      <input asp-for="LastName" type="text" class="form-control">
-                      <span asp-validation-for="LastName"></span>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label asp-for="NationalId"></label>
-                      <input asp-for="NationalId" type="text" class="form-control">
-                      <span asp-validation-for="NationalId"></span>
-                    </div>
-                  <div class="col-md-4 mb-3">
-                    <label asp-for="Sex"></label>
-                    <select asp-for="Sex" asp-items="Html.GetEnumSelectList<Sex>()" class="form-control form-select-lg">
-                      <option selected="selected" value="">انتخاب کنیید</option>
-                    </select>
-                    <span asp-validation-for="Sex"></span>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <label asp-for="FatherName"></label>
-                    <input type="text" asp-for="FatherName" class="form-control">
-                    <span asp-validation-for="FatherName"></span>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <label asp-for="BirthDate"></label>
-                    <input type="text" asp-for="BirthDate" class="form-control">
-                    <span asp-validation-for="BirthDate"></span>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <label asp-for="PassPortCode"></label>
-                    <input type="number" asp-for="BirthDate" class="form-control">
-                    <span asp-validation-for="PassPortCode"></span>
-                  </div>
-        </div>
-          
-        <div class="row">
-          <div class="col-md-2 mb-3">
-            <P>استان و شهرستان محل تولد</P>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label asp-for="BirthProvince"></label>
-            <input asp-for="BirthProvince" type="text" class="form-control-sm">
-            <span asp-validation-for="BirthProvince"></span>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label asp-for="BirthCity"></label>
-            <input asp-for="BirthCity" type="text" class="form-control-sm">
-            <span asp-validation-for="BirthCity"></span>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <label asp-for="MilitaryServiceStatus"></label>
-            <select asp-for="MilitaryServiceStatus" asp-items="Html.GetEnumSelectList<MilitaryStatus>()" class="form-control form-select">
-              <option selected="selected" value="">انتخاب کنیید</option>
-            </select>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label asp-for="MilitaryServiceMonth"></label>
-            <input asp-for="MilitaryServiceMonth" class="form-control" />
-            <span asp-validation-for="MilitaryServiceMonth"></span>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label asp-for="MilitaryServiceEndTime"></label>
-            <input asp-for="MilitaryServiceEndTime" class="form-control" />
-            <span asp-validation-for="MilitaryServiceEndTime"></span>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label asp-for="Religion"></label>
-            <select asp-for="Religion" asp-items="Html.GetEnumSelectList<Religion>()" class="form-control form-select">
-              <option selected="selected" value="">انتخاب کنیید</option>
-            </select>
-            <span asp-validation-for="Religion"></span>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label asp-for="LeftHandPerson"></label>
-            <input asp-for="LeftHandPerson" type="checkbox"  class="form-check-input"/>
-            <span asp-validation-for="LeftHandPerson"></span>
-          </div>
-          
-        </div>
-      </fieldset>
-    </div>
-    <div class="container-fluid" style="border:1px solid black;">
-          <fieldset>
-            <legend style="color:blue;font-weight:bold;">این موارد به حداکثر سن اضافه خواهد شد:</legend>
-            <div class="row">
-            <div class="col-md-4 mb-3" style="border-radius: 5px">
-              <label asp-for="MarriageStatus"></label>
-              <select asp-for="MarriageStatus" asp-items="Html.GetEnumSelectList<MarriageStatus>()" class="form-control form-select">
-                <option selected="selected" value="">انتخاب کنیید</option>
-              </select>
-              <span asp-validation-for="MarriageStatus"></span>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label asp-for="ChildCount"></label>
-              <input asp-for="ChildCount" type="number" class="form-control">
-              <span asp-validation-for="ChildCount"></span>
-            </div>
-            <div class="col-md-4 mb-3">
-              <p>نکته : به ازای تاهل به میزان یک (1) سال ،  داشتن هر فرزند به میزان یک (1) سال و حداکثر تا پنج (5) سال به سقف محدوده سنی مندرج در دفترچه آزمون اضافه خواهد شد.</p>
-            </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <label asp-for="ContractWork"></label>
-                <input type="checkbox" asp-for="ContractWork" class="form-check-input">
-                <span asp-validation-for="ContractWork"></span>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label asp-for="ContractWorkName"></label>
-                <input type="text" asp-for="ContractWorkName" class="form-control">
-                <span asp-validation-for="ContractWorkName"></span>
-              </div>
-              <div class="col-md-1 mb-3">
-                <p>مدت سابقه</p>
-              </div>
-              <div class="col-md-1 mb-3">
-                <label asp-for="MonthOfWork"></label>
-                <input type="number" asp-for="MonthOfWork" class="form-control">
-                <span asp-validation-for="MonthOfWork"></span>
-              </div>
-              <div class="col-md-1 mb-3">
-                <label asp-for="YearOfWork"></label>
-                <input type="number" asp-for="YearOfWork" class="form-control">
-                <span asp-validation-for="YearOfWork"></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <label asp-for="MedicineWork"></label>
-                <input type="checkbox" asp-for="MedicineWork" class="form-check-input">
-                <span asp-validation-for="MedicineWork"></span>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label asp-for="MedicineWorkName"></label>
-                <input type="text" asp-for="MedicineWorkName" class="form-control">
-                <span asp-validation-for="MedicineWorkName"></span>
-              </div>
-              <div class="col-md-1 mb-3">
-                <p>مدت سابقه</p>
-              </div>
-              <div class="col-md-1 mb-3">
-                <label asp-for="MonthOfMedicine"></label>
-                <input type="number" asp-for="MonthOfMedicine" class="form-control">
-                <span asp-validation-for="MonthOfMedicine"></span>
-              </div>
-              <div class="col-md-1 mb-3">
-                <label asp-for="YearOfMedicine"></label>
-                <input type="number" asp-for="YearOfMedicine" class="form-control">
-                <span asp-validation-for="YearOfMedicine"></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <label asp-for="WarTime"></label>
-                <input asp-for="WarTime" type="number" class="form-control">
-                <span asp-validation-for="WarTime"></span>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label asp-for="CaptiveTime"></label>
-                <input asp-for="CaptiveTime" type="number" class="form-control">
-                <span asp-validation-for="CaptiveTime"></span>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label asp-for="InjuredTime"></label>
-                <input asp-for="InjuredTime" type="number" class="form-control">
-                <span asp-validation-for="InjuredTime"></span>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label asp-for="FamilyWarHeroMember"></label>
-                <select asp-for="FamilyWarHeroMember" asp-items="Html.GetEnumSelectList<FamilyMemberWarHero>()" class="form-control form-select">
-                  <option selected="selected" value="">انتخاب کنیید</option>
-                </select>
-                <span asp-validation-for="FamilyWarHeroMember"></span>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label asp-for="AgeExceptionCondition"></label>
-                <select asp-for="AgeExceptionCondition" asp-items="Html.GetEnumSelectList<MilitaryException>()" class="form-control form-select">
-                  <option selected="selected" value="">انتخاب کنیید</option>
-                </select>
-                <span asp-validation-for="AgeExceptionCondition"></span>
-              </div>
-              
-            </div>
-          </fieldset>
-        </div>
-  <div class="container-fluid" style="border:1px solid black;">
-    <fieldset>
-      <legend style="color:blue;font-weight:bold;">مشخصات تحصیلی داوطلب :</legend>
-      <div class="row">
-        <div class="col-md-4 mb-3" style="border-radius: 5px">
-          <label asp-for="EducationLevel"></label>
-          <select asp-for="EducationLevel" asp-items="Html.GetEnumSelectList<EducationLevel>()" class="form-control form-select">
-            <option selected="selected" value="">انتخاب کنیید</option>
-          </select>
-          <span asp-validation-for="EducationLevel"></span>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label asp-for="EducationTitle"></label>
-          <input asp-for="EducationTitle" type="number" class="form-control">
-          <span asp-validation-for="EducationTitle"></span>
-        </div>
-        
-        <div class="col-md-4 mb-3">
-          <label asp-for="EducationSchool"></label>
-          <input asp-for="EducationSchool" type="number" class="form-control">
-          <span asp-validation-for="EducationSchool"></span>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label asp-for="EducationEndTime"></label>
-          <input asp-for="EducationEndTime" type="number" class="form-control">
-          <span asp-validation-for="EducationEndTime"></span>
-        </div>
-        
+<
+<form >
+<div class="container-fluid" style="border:1px solid black;">
+  <fieldset>
+    <legend style="color:blue;font-weight:bold;">اطلاعات فردی</legend>
+    <div class="row">
+      <div class="col-md-4 mb-3" style="border-radius: 5px">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" type="text" class="form-control">
+        <span asp-validation-for="Name"></span>
       </div>
-      
-    </fieldset>
-  </div>
-  <div class="container-fluid" style="border:1px solid black;">
-      <fieldset>
-        <legend style="color:blue;font-weight:bold;">اطلاعات تکمیلی :</legend>
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <label asp-for="HomePhoneNumber"></label>
-            <input asp-for="HomePhoneNumber" type="text" class="form-control">
-            <span asp-validation-for="HomePhoneNumber"></span>
-          </div>
-          
-          <div class="col-md-4 mb-3">
-            <label asp-for="PhoneNumber"></label>
-            <input asp-for="PhoneNumber" type="text" class="form-control">
-            <span asp-validation-for="PhoneNumber"></span>
-          </div>
-          
-          <div class="col-md-4 mb-3">
-            <label asp-for="CodePost"></label>
-            <input asp-for="CodePost" type="text" class="form-control">
-            <span asp-validation-for="CodePost"></span>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label asp-for="Email"></label>
-            <input asp-for="Email" type="text" class="form-control">
-            <span asp-validation-for="Email"></span>
-          </div>
-          
-          <div class="col-md-4 mb-3">
-            <label asp-for="Address"></label>
-            <input asp-for="Address" type="text" class="form-control">
-            <span asp-validation-for="Address"></span>
-          </div>
-          
-        </div>
-        
-      </fieldset>
-    </div>
-   
-  <div class="container-fluid" style="border:1px solid black;">
-    <fieldset>
-      <legend style="color:blue;font-weight:bold;">درخواست شغل :</legend>
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <label asp-for="WantedJobTitle"></label>
-          <input asp-for="WantedJobTitle" type="text" class="form-control">
-          <span asp-validation-for="WantedJobTitle"></span>
-        </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" type="text" class="form-control">
+        <span asp-validation-for="LastName"></span>
       </div>
-    </fieldset>
-  </div>
-  <div class="container-fluid" style="border:1px solid black;">
-              <fieldset>
-                <legend style="color:blue;font-weight:bold;">وضعیت بومی :</legend>
-                <div class="row">
-                  <div class="col-md-4 mb-3">
-                    <p>بومی شهرستان شغل محل انتخابی اصلی براساس :</p>
-                  </div>
-                  
-                  <div class="col-md-4 mb-3">
-                    <label asp-for="LocalCity"></label>
-                    <input type="text" asp-for="LocalCity" class="form-control">
-                    <span asp-validation-for="LocalCity"></span>
-                  </div>
-                  
-                  <div class="col-md-4 mb-3">
-                    <label asp-for="LocalProvince"></label>
-                    <input type="text" asp-for="LocalProvince" class="form-control">
-                    <span asp-validation-for="LocalProvince"></span>
-                  </div>
-                  
-                </div>
-                <div class="row">
-                  
-                </div>
-              </fieldset>
-            </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
-  </form>
+      <div class="col-md-4 mb-3">
+        <label asp-for="NationalId"></label>
+        <input asp-for="NationalId" type="text" class="form-control">
+        <span asp-validation-for="NationalId"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="Sex"></label>
+        <select asp-for="Sex" asp-items="Html.GetEnumSelectList<Sex>()" class="form-control form-select-lg">
+          <option selected="selected" value="">انتخاب کنید</option>
+        </select>
+        <span asp-validation-for="Sex"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="FatherName"></label>
+        <input type="text" asp-for="FatherName" class="form-control">
+        <span asp-validation-for="FatherName"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="BirthDate"></label>
+        <input type="text" readonly asp-for="BirthDate" class="form-control persian-datepicker">
+        <span asp-validation-for="BirthDate"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="PassPortCode"></label>
+        <input type="number" asp-for="BirthDate" class="form-control">
+        <span asp-validation-for="PassPortCode"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2 mb-3">
+        <P>استان و شهرستان محل تولد</P>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label asp-for="BirthProvince"></label>
+        <input asp-for="BirthProvince" type="text" class="form-control-sm">
+        <span asp-validation-for="BirthProvince"></span>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label asp-for="BirthCity"></label>
+        <input asp-for="BirthCity" type="text" class="form-control-sm">
+        <span asp-validation-for="BirthCity"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label asp-for="MilitaryServiceStatus"></label>
+        <select asp-for="MilitaryServiceStatus" asp-items="Html.GetEnumSelectList<MilitaryStatus>()" class="form-control form-select">
+          <option selected="selected" value="">انتخاب کنید</option>
+        </select>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="MilitaryServiceMonth"></label>
+        <input asp-for="MilitaryServiceMonth" class="form-control"/>
+        <span asp-validation-for="MilitaryServiceMonth"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="MilitaryServiceEndTime"></label>
+        <input asp-for="MilitaryServiceEndTime" readonly class="form-control persian-datepicker"/>
+        <span asp-validation-for="MilitaryServiceEndTime"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="Religion"></label>
+        <select asp-for="Religion" asp-items="Html.GetEnumSelectList<Religion>()" class="form-control form-select">
+          <option selected="selected" value="">انتخاب کنید</option>
+        </select>
+        <span asp-validation-for="Religion"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="LeftHandPerson"></label>
+        <input asp-for="LeftHandPerson" type="checkbox" class="form-check-input"/>
+        <span asp-validation-for="LeftHandPerson"></span>
+      </div>
+
+    </div>
+  </fieldset>
 </div>
+<div class="container-fluid" style="border:1px solid black;">
+  <fieldset>
+    <legend style="color:blue;font-weight:bold;">این موارد به حداکثر سن اضافه خواهد شد:</legend>
+    <div class="row">
+      <div class="col-md-4 mb-3" style="border-radius: 5px">
+        <label asp-for="MarriageStatus"></label>
+        <select asp-for="MarriageStatus" asp-items="Html.GetEnumSelectList<MarriageStatus>()" class="form-control form-select">
+          <option selected="selected" value="">انتخاب کنید</option>
+        </select>
+        <span asp-validation-for="MarriageStatus"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="ChildCount"></label>
+        <input asp-for="ChildCount" type="number" class="form-control">
+        <span asp-validation-for="ChildCount"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <p>نکته : به ازای تاهل به میزان یک (1) سال ، داشتن هر فرزند به میزان یک (1) سال و حداکثر تا پنج (5) سال به سقف محدوده سنی مندرج در دفترچه آزمون اضافه خواهد شد.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label asp-for="ContractWork"></label>
+        <input type="checkbox" asp-for="ContractWork" class="form-check-input">
+        <span asp-validation-for="ContractWork"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="ContractWorkName"></label>
+        <input type="text" asp-for="ContractWorkName" class="form-control">
+        <span asp-validation-for="ContractWorkName"></span>
+      </div>
+      <div class="col-md-1 mb-3">
+        <p>مدت سابقه</p>
+      </div>
+      <div class="col-md-1 mb-3">
+        <label asp-for="MonthOfWork"></label>
+        <input type="number" asp-for="MonthOfWork" class="form-control">
+        <span asp-validation-for="MonthOfWork"></span>
+      </div>
+      <div class="col-md-1 mb-3">
+        <label asp-for="YearOfWork"></label>
+        <input type="number" asp-for="YearOfWork" class="form-control">
+        <span asp-validation-for="YearOfWork"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label asp-for="MedicineWork"></label>
+        <input type="checkbox" asp-for="MedicineWork" class="form-check-input">
+        <span asp-validation-for="MedicineWork"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="MedicineWorkName"></label>
+        <input type="text" asp-for="MedicineWorkName" class="form-control">
+        <span asp-validation-for="MedicineWorkName"></span>
+      </div>
+      <div class="col-md-1 mb-3">
+        <p>مدت سابقه</p>
+      </div>
+      <div class="col-md-1 mb-3">
+        <label asp-for="MonthOfMedicine"></label>
+        <input type="number" asp-for="MonthOfMedicine" class="form-control">
+        <span asp-validation-for="MonthOfMedicine"></span>
+      </div>
+      <div class="col-md-1 mb-3">
+        <label asp-for="YearOfMedicine"></label>
+        <input type="number" asp-for="YearOfMedicine" class="form-control">
+        <span asp-validation-for="YearOfMedicine"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label asp-for="WarTime"></label>
+        <input asp-for="WarTime" type="number" class="form-control">
+        <span asp-validation-for="WarTime"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="CaptiveTime"></label>
+        <input asp-for="CaptiveTime" type="number" class="form-control">
+        <span asp-validation-for="CaptiveTime"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="InjuredTime"></label>
+        <input asp-for="InjuredTime" type="number" class="form-control">
+        <span asp-validation-for="InjuredTime"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="FamilyWarHeroMember"></label>
+        <select asp-for="FamilyWarHeroMember" asp-items="Html.GetEnumSelectList<FamilyMemberWarHero>()" class="form-control form-select">
+          <option selected="selected" value="">انتخاب کنید</option>
+        </select>
+        <span asp-validation-for="FamilyWarHeroMember"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="AgeExceptionCondition"></label>
+        <select asp-for="AgeExceptionCondition" asp-items="Html.GetEnumSelectList<MilitaryException>()" class="form-control form-select">
+          <option selected="selected" value="">انتخاب کنید</option>
+        </select>
+        <span asp-validation-for="AgeExceptionCondition"></span>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+<div class="container-fluid" style="border:1px solid black;">
+  <fieldset>
+    <legend style="color:blue;font-weight:bold;">مشخصات تحصیلی داوطلب :</legend>
+    <div class="row">
+      <div class="col-md-4 mb-3" style="border-radius: 5px">
+        <label asp-for="EducationLevel"></label>
+        <select asp-for="EducationLevel" asp-items="Html.GetEnumSelectList<EducationLevel>()" class="form-control form-select">
+          <option selected="selected" value="">انتخاب کنید</option>
+        </select>
+        <span asp-validation-for="EducationLevel"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="EducationTitle"></label>
+        <input asp-for="EducationTitle" type="number" class="form-control">
+        <span asp-validation-for="EducationTitle"></span>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label asp-for="EducationSchool"></label>
+        <input asp-for="EducationSchool" type="number" class="form-control">
+        <span asp-validation-for="EducationSchool"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="EducationEndTime"></label>
+        <input asp-for="EducationEndTime" type="number" class="form-control">
+        <span asp-validation-for="EducationEndTime"></span>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+<div class="container-fluid" style="border:1px solid black;">
+  <fieldset>
+    <legend style="color:blue;font-weight:bold;">اطلاعات تکمیلی :</legend>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label asp-for="HomePhoneNumber"></label>
+        <input asp-for="HomePhoneNumber" type="text" class="form-control">
+        <span asp-validation-for="HomePhoneNumber"></span>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" type="text" class="form-control">
+        <span asp-validation-for="PhoneNumber"></span>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label asp-for="CodePost"></label>
+        <input asp-for="CodePost" type="text" class="form-control">
+        <span asp-validation-for="CodePost"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" type="text" class="form-control">
+        <span asp-validation-for="Email"></span>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" type="text" class="form-control">
+        <span asp-validation-for="Address"></span>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+<div class="container-fluid" style="border:1px solid black;">
+  <fieldset>
+    <legend style="color:blue;font-weight:bold;">درخواست شغل :</legend>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label asp-for="WantedJobTitle"></label>
+        <input asp-for="WantedJobTitle" type="text" class="form-control">
+        <span asp-validation-for="WantedJobTitle"></span>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<div class="container-fluid" style="border:1px solid black;">
+  <fieldset>
+    <legend style="color:blue;font-weight:bold;">وضعیت بومی :</legend>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <p>بومی شهرستان شغل محل انتخابی اصلی براساس :</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label asp-for="LocalCity"></label>
+        <input type="text" asp-for="LocalCity" class="form-control">
+        <span asp-validation-for="LocalCity"></span>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label asp-for="LocalProvince"></label>
+        <input type="text" asp-for="LocalProvince" class="form-control">
+        <span asp-validation-for="LocalProvince"></span>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label asp-for="SameLocalPlace"></label>
+        <input type="checkbox" asp-for="SameLocalPlace" class="form-check-input">
+        <span asp-validation-for="SameLocalPlace"></span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label asp-for="ConfirmLocalCity"></label>
+        <input type="checkbox" asp-for="ConfirmLocalCity" class="form-check-input">
+        <span asp-validation-for="ConfirmLocalCity"></span>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+<button class="btn btn-primary" type="submit">ثبت اطلاعات</button>
+</form>
+</div>
+
+@section Styles
+{<link href="~/lib/persian-datepicker/css/persian-datepicker.min.css" rel="stylesheet" />}
+@section Scripts
+{
+  <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+  <script src="~/lib/persian-datepicker/js/persian-date.js" ></script>
+  <script src="~/lib/persian-datepicker/js/persian-datepicker.min.js" type="text/javascript"></script>
+  <script>
+  $(document).ready(
+          () => {
+            $(".persian-datepicker").pDatepicker({
+                                            "autoClose": true,
+                                            "position": "auto",
+                                            "responsive": true,
+                                            "inputDelay": 800,
+                                            initialValue: false,
+                                            observer: true,
+                                            autoClose: true,
+                                            format: 'L',
+                                            "toolbox": {
+                                                "enabled": true,
+                                                "calendarSwitch": {
+                                                    "enabled": false,
+                                                },
+                                            },
+                                            "initialValueType": 'persian',
+                                            "calendarType": "persian",
+                                        });
+          }
+  )
+  </script>
+}

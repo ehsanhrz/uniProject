@@ -21,4 +21,8 @@
       <PackageReference Include="Npm" Version="3.5.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\lib\persian-datepicker\" />
+    </ItemGroup>
+
 </Project>
