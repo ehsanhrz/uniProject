@@ -29,19 +29,23 @@ public class MainFormModel
     
     [Required(ErrorMessage = "لطفآ جنسیت خود را وارد کنیید"),StringLength(50),
     Display(Name = "جنسیت")]
-    public string Sex { get; set; } = string.Empty;
+    public int Sex { get; set; }
     
     [Required(ErrorMessage = "لطفآ تاریخ تولد خود را وارد کنیید"),
     Display(Name = "تاریخ تولد")]
     public DateOnly BirthDate { get; set; }
     
     [Required(ErrorMessage = "لطفآ استان تولد خود را وارد کنیید"),StringLength(50),
-    Display(Name = "استان تولد")]
+    Display(Name = "استان")]
     public string BirthProvince { get; set; } = string.Empty;
     
     [Required(ErrorMessage = "لطفآ شهر تولد خود را وارد کنیید"),StringLength(50),
-    Display(Name = "شهر تولد")]
+    Display(Name = "شهر")]
     public string BirthCity { get; set; } = string.Empty;
+    
+    [Required(ErrorMessage = "لطفآ وضیعت خود را وارد کنیید"),
+     Display(Name = "وضیت نظام وظیفه")]
+    public int MilitaryServiceStatus { get; set; }
     
     [Required(ErrorMessage = "لطفآ مدت خدمت نظام وظیفه (ماه) خود را وارد کنیید"),
     Display(Name = "مدت خدمت نظام وظیفه (ماه)")]
@@ -60,6 +64,8 @@ public class MainFormModel
     
     [Required(ErrorMessage = "لطفآ وضیعت تاهل خود را وارد کنیید"),Display(Name = "وضیعت تاهل")]
     public Boolean MarriageStatus { get; set; }
+    
+    [Display(Name = "تعداد فرزند")] public int ChildCount { get; set; }
     
     [Display(Name = "شاغل قراردادی تمام وقت یا پیمانی هستم (به منظور اضافه شدن به حداکثر سن ): ")]
     public Boolean ContractWork { get; set; }
@@ -92,7 +98,7 @@ public class MainFormModel
     [Display(Name = "مدت زمان بستری شدن و یا استراحت پزشکی رزمندگان داوطلب در اثر مجروحیت در جبهه های نبرد حق علیه باطل به میزان مدت بستری")]
     public DateOnly InjuredTime { get; set; }
     
-    [Display(Name = "فراد خانواده شهداء بمیزان 5 سال به شرح ذیل"),StringLength(50)] 
+    [Display(Name = "افراد خانواده شهداء بمیزان 5 سال به شرح ذیل"),StringLength(50)] 
     public string FamilyWarHeroMember { get; set; } = string.Empty;
     
     [Display(Name = "مشمولین معاف از شرط سنی  به شرط ارائه مدارک از طرف بنیاد شهید و امور ایثارگران"),StringLength(50)] 

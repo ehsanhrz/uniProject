@@ -8,13 +8,20 @@
     ".NETCoreApp,Version=v7.0": {
       "uniProject/1.0.0": {
         "dependencies": {
+          "MD.BootstrapPersianDateTimePicker": "2.3.0",
           "Microsoft.EntityFrameworkCore": "8.0.0-preview.5.23280.1",
           "Microsoft.EntityFrameworkCore.Design": "8.0.0-preview.5.23280.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.0-preview.5.23280.1",
-          "Microsoft.EntityFrameworkCore.Tools": "8.0.0-preview.5.23280.1"
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.0-preview.5.23280.1",
+          "Npm": "3.5.2"
         },
         "runtime": {
           "uniProject.dll": {}
+        }
+      },
+      "bootstrap/3.3.1": {
+        "dependencies": {
+          "jQuery": "1.9.0"
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -23,6 +30,13 @@
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
           }
+        }
+      },
+      "jQuery/1.9.0": {},
+      "MD.BootstrapPersianDateTimePicker/2.3.0": {
+        "dependencies": {
+          "bootstrap": "3.3.1",
+          "jQuery": "1.9.0"
         }
       },
       "Microsoft.Data.Sqlite.Core/8.0.0-preview.5.23280.1": {
@@ -231,6 +245,18 @@
           }
         }
       },
+      "Node.js/0.12.7": {},
+      "NoGit/0.1.0": {
+        "dependencies": {
+          "Node.js": "0.12.7"
+        }
+      },
+      "Npm/3.5.2": {
+        "dependencies": {
+          "NoGit": "0.1.0",
+          "Node.js": "0.12.7"
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
         "dependencies": {
           "SQLitePCLRaw.lib.e_sqlite3": "2.1.4",
@@ -428,12 +454,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "bootstrap/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+OganGYT1i1uIwZPa+AQUT3F3XxWUgFpFoYj+ujM4U5ZJYywW+nEl3v+A5BElLZNbk0FkFFZV4JixIfL6Q4xfg==",
+      "path": "bootstrap/3.3.1",
+      "hashPath": "bootstrap.3.3.1.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "jQuery/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bS6OGSd/QL39vKKhATpeehgZDCzV6foRJ52EocEGAB29VetwXkQHN6KQIBlBbW9VJzuHr+rQxHYZ13MnPGQ/vw==",
+      "path": "jquery/1.9.0",
+      "hashPath": "jquery.1.9.0.nupkg.sha512"
+    },
+    "MD.BootstrapPersianDateTimePicker/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PkC/9S/qBG9jmc8gQJ2mjN3+DPdXf4bI5pDsCxMaNs0RFUPlHHYpYPqq274qoYemFg/jEI98GZqZ7DL7xz4OQw==",
+      "path": "md.bootstrappersiandatetimepicker/2.3.0",
+      "hashPath": "md.bootstrappersiandatetimepicker.2.3.0.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/8.0.0-preview.5.23280.1": {
       "type": "package",
@@ -574,6 +621,27 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Node.js/0.12.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-15c78ckXi3Zv6FWU5/1XrcIPiE+a+oK3xZLAEAHXWbHv2dy/ILBG2qGFPGW92dei3/JJ11mHWhB941tQ465A6w==",
+      "path": "node.js/0.12.7",
+      "hashPath": "node.js.0.12.7.nupkg.sha512"
+    },
+    "NoGit/0.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NJY9sH90rT75WF3fAf832poUntcnw+zLGxk1fQR01efWj+eLEpvLbXtLyY4V0Gr07avyJByvrewyqbf01MhJCQ==",
+      "path": "nogit/0.1.0",
+      "hashPath": "nogit.0.1.0.nupkg.sha512"
+    },
+    "Npm/3.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jj3UFTTDCAP38rhGvwMe+Wv5hbPjBwePzvwtX69CeEtZ9uiIWKGiZdvpGV0JGlti2INa7k7DuL1uRaOlQunA8w==",
+      "path": "npm/3.5.2",
+      "hashPath": "npm.3.5.2.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
       "type": "package",

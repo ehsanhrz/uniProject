@@ -39,6 +39,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "MD.BootstrapPersianDateTimePicker": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0-preview.5.23280.1, )"
@@ -58,6 +62,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.0-preview.5.23280.1, )"
+            },
+            "Npm": {
+              "target": "Package",
+              "version": "[3.5.2, )"
             }
           },
           "imports": [

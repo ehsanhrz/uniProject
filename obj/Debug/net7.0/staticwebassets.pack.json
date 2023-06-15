@@ -245,6 +245,22 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\mds.bs.datetimepicker.js",
+      "PackagePath": "staticwebassets\\lib\\mds.bs.datetimepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\mds.bs.datetimepicker.js.map",
+      "PackagePath": "staticwebassets\\lib\\mds.bs.datetimepicker.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\mds.bs.datetimepicker.style.css",
+      "PackagePath": "staticwebassets\\lib\\mds.bs.datetimepicker.style.css"
+    },
+    {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\mds.bs.datetimepicker.style.css.map",
+      "PackagePath": "staticwebassets\\lib\\mds.bs.datetimepicker.style.css.map"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.uniProject.props",
       "PackagePath": "build\\uniProject.props"
     },
