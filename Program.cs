@@ -1,8 +1,23 @@
+using uniProject.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("uniProjectContextConnection") ?? throw new InvalidOperationException("Connection string 'uniProjectContextConnection' not found.");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<FormContext>(item => item.EnableSensitiveDataLogging());
 
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = "auth";
+    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+builder.Services.AddScoped<FormContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -13,11 +28,15 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 
+app.MapDefaultControllerRoute();
 app.UseAuthorization();
 
 app.MapControllerRoute(

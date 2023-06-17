@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\IranianSans.ttf",
+      "PackagePath": "staticwebassets\\lib\\IranianSans.ttf"
+    },
+    {
       "Id": "C:\\Users\\ehsan\\RiderProjects\\uniProject\\uniProject\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

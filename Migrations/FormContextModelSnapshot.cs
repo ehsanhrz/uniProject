@@ -24,21 +24,19 @@ namespace uniProject.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("AgeExceptionCondition")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("AgeExceptionCondition")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("BirthCity")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly>("BirthDate")
+                    b.Property<string>("BirthDate")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("BirthProvince")
@@ -46,8 +44,11 @@ namespace uniProject.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly>("CaptiveTime")
+                    b.Property<string>("CaptiveTime")
                         .HasColumnType("TEXT");
+
+                    b.Property<int?>("ChildCount")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("CodePost")
                         .HasColumnType("INTEGER");
@@ -59,35 +60,26 @@ namespace uniProject.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ContractWorkName")
-                        .IsRequired()
-                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly>("EducationEndTime")
+                    b.Property<string>("EducationEndTime")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("EducationLevel")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("EducationLevel")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("EducationSchool")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("EducationTitle")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FamilyWarHeroMember")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("FamilyWarHeroMember")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("FatherName")
                         .IsRequired()
@@ -95,11 +87,10 @@ namespace uniProject.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("HomePhoneNumber")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly>("InjuredTime")
+                    b.Property<string>("InjuredTime")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
@@ -111,37 +102,37 @@ namespace uniProject.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LocalCity")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LocalProvince")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("MarriageStatus")
+                    b.Property<int>("MarriageStatus")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("MedicineWork")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("MedicineWorkName")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<DateOnly>("MilitaryServiceEndTime")
-                        .HasMaxLength(50)
+                    b.Property<string>("MilitaryServiceEndTime")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("MilitaryServiceMonth")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("MonthOfMedicine")
+                    b.Property<int>("MilitaryServiceStatus")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("MonthOfWork")
+                    b.Property<int?>("MonthOfMedicine")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("MonthOfWork")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
@@ -160,34 +151,29 @@ namespace uniProject.Migrations
                         .HasMaxLength(12)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Religion")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Religion")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("SameLocalPlace")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Sex")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
-
-                    b.Property<float>("TrackingId")
-                        .HasColumnType("REAL");
-
-                    b.Property<string>("WantedJobTitle")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateOnly>("WarTime")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("YearOfMedicine")
+                    b.Property<int>("Sex")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("YearOfWork")
+                    b.Property<long?>("TrackingId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("WantedJobTitle")
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("WarTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("YearOfMedicine")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("YearOfWork")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

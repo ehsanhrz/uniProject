@@ -10,7 +10,8 @@ public class FormContext : DbContext
 
     public string DbPath { get; }
 
-    public FormContext()
+    
+    public FormContext(DbContextOptions<FormContext> options) : base(options)
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);

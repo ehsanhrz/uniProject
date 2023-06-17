@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using uniProject.Models;
 
 namespace uniProject.Controllers;
@@ -8,16 +9,20 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private readonly FormContext _context;
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, FormContext formContext)
     {
         _logger = logger;
-        _context = new FormContext();
-
+        _context = formContext;
     }
 
     [HttpGet("{trackingId:long?}")]
     public IActionResult Index(long? trackingId)
     {
+        var userSession = HttpContext.Session.GetInt32("auth");
+        if (userSession == null)
+        {
+            return RedirectToAction("Index", "Auth");
+        }
         if (trackingId == null)
         {
             return View(new MainFormModel());
@@ -40,7 +45,7 @@ public class HomeController : Controller
             {
                 return View(formModel);
             }
-            var searchResult = _context.Forms
+            var searchResult = _context.Forms.AsNoTracking()
                 .FirstOrDefault(item => item.TrackingId == formModel.TrackingId);
             if (searchResult == null || formModel.TrackingId == null)
             {
@@ -62,8 +67,8 @@ public class HomeController : Controller
        
     }
 
-    [HttpGet("{trackingId:long}")]
-    public IActionResult Success(long? trackingId)
+    [HttpGet("get/{trackingId:long?}")]
+    public IActionResult Success(long trackingId)
     {
         
         return View(trackingId);
