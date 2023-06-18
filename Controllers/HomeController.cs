@@ -18,10 +18,10 @@ public class HomeController : Controller
     [HttpGet("{trackingId:long?}")]
     public IActionResult Index(long? trackingId)
     {
-        var userSession = HttpContext.Session.GetInt32("auth");
+        var userSession = HttpContext.Session.GetString("auth");
         if (userSession == null)
         {
-            return RedirectToAction("Index", "Auth");
+            return RedirectToAction("Login", "Auth");
         }
         if (trackingId == null)
         {
@@ -61,7 +61,7 @@ public class HomeController : Controller
         }
         catch(Exception ex)
         {
-            ModelState.AddModelError("",ex.Message);
+            ModelState.AddModelError("error",ex.Message);
             return View(formModel);
         }
        

@@ -28,7 +28,7 @@
 </form>
 <form asp-controller="Home" asp-action="Index" method="post">
 <div class="container-fluid" style="border:1px solid black;">
-  
+  <span class="text-danger">@Html.ValidationMessage("error")</span>
   <fieldset>
     <legend style="color:blue;font-weight:bold;">اطلاعات فردی</legend>
     <div class="row">

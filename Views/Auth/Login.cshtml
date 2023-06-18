@@ -1,0 +1,27 @@
+﻿@model UserModel
+
+@{
+    ViewData["Title"] = "ورود";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="container-fluid">
+  <form asp-controller="Auth" asp-action="Login" method="post">
+    <!-- Email input -->
+    <span class="text-danger">@Html.ValidationSummary()</span>
+    <div class="col-md-4 mb-3">
+      <input asp-for="Id" hidden/>
+      <label class="form-label" asp-for="NationalId"></label>
+      <input asp-for="NationalId" class="form-control"/>
+    </div>
+    <!-- Password input -->
+    <div class="col-md-4 mb-3">
+      <label class="form-label" asp-for="Password" ></label>
+      <input asp-for="Password" class="form-control"/>
+            
+    </div>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">ورود</button>
+    <a asp-area="" asp-controller="Auth" asp-action="Signup"><button type="button" class="btn btn-primary btn-block mb-4">ثبت نام</button></a> 
+  </form>
+  
+</div>
