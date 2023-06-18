@@ -1,6 +1,6 @@
 ﻿@model MainFormModel 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "فرم";
 }
 <style>
   
@@ -21,7 +21,7 @@
           <input id="trackingId" name="trackingId" required type="text" class="form-control ">
         </div>
       </div>
-      <button type="submit">بازیابی فرم</button>
+      <button class="btn btn-primary" type="submit">بازیابی فرم</button>
     </fieldset>
   </div>
   
@@ -250,7 +250,7 @@
       </div>
       <div class="col-md-4 mb-3 ">
         <label asp-for="EducationEndTime"></label>
-        <input asp-for="EducationEndTime" type="text" readonly class="form-control">
+        <input asp-for="EducationEndTime" type="text" readonly class="form-control persian-datepicker">
         <span class="text-danger" asp-validation-for="EducationEndTime"></span>
       </div>
 
